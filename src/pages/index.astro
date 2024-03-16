@@ -1,0 +1,34 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+<Card />
+
+<style>
+	:root {
+	  --diamond-size: 100px;
+	  --diamond-color: #2c3e50; /* Un tono oscuro de azul */
+	  --background-color: #34495e; /* Un tono más oscuro para el fondo */
+	}
+  
+	:global(html),
+	:global(body) {
+	  margin: 0;
+	  padding: 0;
+	  background-color: var(--background-color);
+	  background-image: 
+		linear-gradient(135deg, var(--diamond-color) 25%, transparent 25%), 
+		linear-gradient(225deg, var(--diamond-color) 25%, transparent 25%), 
+		linear-gradient(45deg, var(--diamond-color) 25%, transparent 25%), 
+		linear-gradient(315deg, var(--diamond-color) 25%, transparent 25%);
+	  background-position:
+		var(--diamond-size) 0,
+		var(--diamond-size) var(--diamond-size),
+		0 0,
+		0 var(--diamond-size);
+	  background-size: var(--diamond-size) var(--diamond-size);
+	  background-repeat: repeat;
+	}
+  </style>
+  
+  
